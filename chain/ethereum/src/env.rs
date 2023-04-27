@@ -138,7 +138,7 @@ impl Default for EnvVars {
 struct Inner {
     #[envconfig(from = "GRAPH_GETH_ETH_CALL_ERRORS", default = "")]
     geth_eth_call_errors: String,
-    #[envconfig(from = "GRAPH_ETH_GET_LOGS_MAX_CONTRACTS", default = "2000")]
+    #[envconfig(from = "GRAPH_ETH_GET_LOGS_MAX_CONTRACTS", default = "999")]
     get_logs_max_contracts: usize,
 
     #[envconfig(from = "ETHEREUM_TRACE_STREAM_STEP_SIZE", default = "50")]
@@ -147,7 +147,7 @@ struct Inner {
     max_event_only_range: BlockNumber,
     #[envconfig(from = "ETHEREUM_BLOCK_BATCH_SIZE", default = "10")]
     block_batch_size: usize,
-    #[envconfig(from = "GRAPH_ETHEREUM_MAX_BLOCK_RANGE_SIZE", default = "2000")]
+    #[envconfig(from = "GRAPH_ETHEREUM_MAX_BLOCK_RANGE_SIZE", default = "999")]
     max_block_range_size: BlockNumber,
     #[envconfig(from = "GRAPH_ETHEREUM_JSON_RPC_TIMEOUT", default = "180")]
     json_rpc_timeout_in_secs: u64,
